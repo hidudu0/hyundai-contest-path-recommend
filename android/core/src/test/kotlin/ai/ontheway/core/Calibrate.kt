@@ -10,9 +10,9 @@ import kotlin.math.roundToInt
  * `./gradlew :core:calibrate` — runs the app's own corridor + OSRM detour code on real trips
  * and writes docs/calibration.md, the evidence behind the ΔT·ΔD limits in [Params].
  */
-private class Trip(val name: String, val from: LatLon, val to: LatLon)
+internal class Trip(val name: String, val from: LatLon, val to: LatLon)
 
-private val trips = listOf(
+internal val trips = listOf(
     Trip("광주 → 서울 (호남·경부고속도로)", LatLon(35.1601, 126.8526), LatLon(37.5665, 126.9780)),
     Trip("부산 → 대구 (경부고속도로)", LatLon(35.1796, 129.0756), LatLon(35.8714, 128.6014)),
     Trip("서울 강남 → 수원 (도심+고속)", LatLon(37.4979, 127.0276), LatLon(37.2636, 127.0286)),
@@ -26,7 +26,7 @@ private val trips = listOf(
 private const val WINDOW_M = 100_000.0 // a typical SafeRange when the yellow level starts
 
 private var last = 0L
-private fun get(url: String): String {
+internal fun get(url: String): String {
     Thread.sleep(maxOf(0L, 1100 - (System.currentTimeMillis() - last))) // public OSRM: about 1 request per second
     last = System.currentTimeMillis()
     val c = URL(url).openConnection() as HttpURLConnection

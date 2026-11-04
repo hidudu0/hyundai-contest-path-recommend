@@ -7,14 +7,17 @@
     brew install osmium-tool && pip install shapely
     python3 tools/build_places.py 사업자_기본정보(주유소).csv 현재_판매가격(주유소).csv south-korea-latest.osm.pbf
 
-Opinet has the official station list (name, brand, address, self-service, today's prices) but no
-coordinates. Each station is placed inside its own 시/군/구 boundary, most certain first:
+Opinet's downloads have the official station list (name, brand, address, self-service, today's
+prices) but no coordinates. The official position comes from data/opinet/api_stations.csv
+(tools/fetch_opinet.py) when it has the station. Others are placed inside their own 시/군/구
+boundary, most certain first:
   1. 이름: the OSM fuel station with the same name
   2. 주소: the OSM building with the same road address (도로명 + 건물번호)
   3. 도로: the OSM fuel station on the same road (within 60 m of it), nearest to the estimate below
   4. 보간: between the OSM buildings on the same road and side with the nearest numbers (road
      numbers count about 10 m each), moved onto an OSM fuel station within 150 m when there is one
-The error of 3 and 4 is measured against the stations placed by 1 and written to docs/stations.md.
+The error of 3 and 4 is measured against the stations placed by 1, and every step against the
+official positions, and written to docs/stations.md.
 A station none of these finds is left out rather than put in the wrong place.
 FOOD (drive-throughs, highway rest areas) still comes from OSM.
 """
@@ -35,6 +38,7 @@ from shapely.strtree import STRtree
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUT = os.path.join(ROOT, "android", "app", "src", "main", "assets", "places.csv")
 REPORT = os.path.join(ROOT, "docs", "stations.md")
+OFFICIAL = os.path.join(ROOT, "data", "opinet", "api_stations.csv")
 
 ROAD = re.compile(r"(\S+(?:로|길))\s+(\d+)(?:-(\d+))?")
 ROAD_M = 100  # an OSM station this close to the road centre line counts as "on" it
@@ -358,6 +362,16 @@ def main(basic_csv, price_csv, pbf):
             else:
                 found[s["고유번호"]] = (est, "보간")
 
+    # official positions replace the matches; the difference shows how good the matching is
+    official = {r["id"]: Point(float(r["lon"]), float(r["lat"])) for r in read_csv(OFFICIAL)} if os.path.exists(OFFICIAL) else {}
+    off_by = defaultdict(list)
+    for s in stations:
+        pt = official.get(s["고유번호"])
+        if pt:
+            if s["고유번호"] in found:
+                off_by[found[s["고유번호"]][1]].append(dist_m(found[s["고유번호"]][0], pt))
+            found[s["고유번호"]] = (pt, "공식")
+
     placed, missed, how = [], [], Counter()
     for s in stations:
         got = found.get(s["고유번호"])
@@ -396,7 +410,7 @@ def main(basic_csv, price_csv, pbf):
     reasons = Counter(r for _, r in missed)
     by_sido = Counter(s["지역"].split()[0] for s, _ in missed)
     all_sido = Counter(s["지역"].split()[0] for s in stations)
-    label = {"이름": "같은 시군구, 같은 이름의 OSM 주유소", "주소": "같은 시군구, 같은 도로명주소의 OSM 건물",
+    label = {"공식": "오피넷 API 공식 좌표", "이름": "같은 시군구, 같은 이름의 OSM 주유소", "주소": "같은 시군구, 같은 도로명주소의 OSM 건물",
              "휴게소": "고속도로: 같은 이름·방향의 OSM 휴게소 (안의 주유소)",
              "도로": f"같은 도로({ROAD_M} m 이내)의 OSM 주유소", "보간": "같은 도로·같은 쪽 건물번호 보간"}
     with open(REPORT, "w", encoding="utf-8") as f:
@@ -405,8 +419,12 @@ def main(basic_csv, price_csv, pbf):
                 f"**{len(placed):,}곳({len(placed) / total:.1%})**에 실제 위치를 붙였습니다. "
                 "이름·상표·셀프 여부·가격은 모두 오피넷 원본 그대로입니다.\n\n")
         f.write("| 위치를 찾은 방법 (확실한 순) | 곳 |\n|---|---|\n")
-        for k in ("이름", "휴게소", "주소", "도로", "보간"):
+        for k in ("공식", "이름", "휴게소", "주소", "도로", "보간"):
             f.write(f"| {label[k]} | {how[k]:,} |\n")
+        f.write("\n공식 좌표가 있는 주유소로 재 본 매칭 방식별 실제 오차입니다.\n\n"
+                "| 방식 | 비교한 곳 | 중앙값 | 90% | 1 km 넘게 틀림 |\n|---|---|---|---|---|\n")
+        for k, e in off_by.items():
+            f.write(f"| {k} | {len(e):,} | {pct(e, .5):.0f} m | {pct(e, .9):.0f} m | {sum(x > 1000 for x in e):,} ({sum(x > 1000 for x in e) / len(e):.0%}) |\n")
         f.write("\n3·4번 방식의 정확도: 이름으로 위치가 확실한 곳에 같은 방식을 써 보고 실제 자리와 거리를 쟀습니다.\n\n"
                 "| 방식 | 시험한 곳 | 중앙값 | 80% | 90% | 정확히 같은 주유소 (≤ 30 m) |\n|---|---|---|---|---|---|\n")
         for k in ("도로", "보간"):
@@ -427,11 +445,11 @@ def main(basic_csv, price_csv, pbf):
                 "긴급 자동 경유지는 오피넷에서 확인된 주유소를 먼저 고릅니다.\n")
         f.write("\n가격은 오피넷 \"사업자별 현재 판매가격\" 내려받은 날 기준입니다 (앱 화면에 기준일 표시). "
                 "위치를 못 찾은 오피넷 주유소는 틀린 자리에 두지 않으려고 뺐습니다. 도로 시작점에서 번호 × 10 m로 놓는 방식과 "
-                "시군구 안 상표 소거 방식도 시험했지만 오차가 수 km라 쓰지 않았습니다. "
-                "오피넷 API 키가 있으면 좌표(GIS_X/Y_COOR)로 나머지를 채울 수 있습니다.\n")
+                "시군구 안 상표 소거 방식도 시험했지만 오차가 수 km라 쓰지 않았습니다.\n")
     print(f"방향 판정 {sum(side_checks)}/{len(side_checks)}")
     print(f"{OUT}: {len(placed)}/{total} 오피넷 주유소 {dict(how)} + OSM {len(extra)}, {len(set(food))} DT·휴게소; 빠짐 {dict(reasons)}; "
-          + "; ".join(f"{k} 오차 중앙 {pct(e, .5):.0f} m / 90% {pct(e, .9):.0f} m (n={len(e)})" for k, e in errors.items() if e))
+          + "; ".join(f"{k} 오차 중앙 {pct(e, .5):.0f} m / 90% {pct(e, .9):.0f} m (n={len(e)})" for k, e in errors.items() if e)
+          + "; 공식 좌표 대비 " + "; ".join(f"{k} 중앙 {pct(e, .5):.0f} m, 1 km 초과 {sum(x > 1000 for x in e)}/{len(e)}" for k, e in off_by.items()))
 
 
 if __name__ == "__main__":
