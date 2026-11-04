@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="leaflet/leaflet.css">
 <style>
 html, body, #map { margin: 0; height: 100%; background: #EEF1F6; font-family: sans-serif; }
-.bar { position: absolute; top: 14px; left: 16px; right: 16px; z-index: 1000; display: flex; gap: 10px; align-items: center; pointer-events: none; }
-.bar > * { background: rgba(255,255,255,.93); border-radius: 10px; padding: 6px 12px; font: 500 19px sans-serif; color: #4B5563; }
+.bar { position: absolute; top: 14px; left: 16px; right: 16px; z-index: 1000; display: flex; gap: 8px; align-items: center; pointer-events: none; }
+.bar > * { background: rgba(255,255,255,.93); border-radius: 10px; padding: 6px 10px; font: 500 19px sans-serif; color: #4B5563; white-space: nowrap; }
 .bar b { margin-right: auto; color: #10285A; font-weight: 700; }
 .bar i { display: inline-block; width: 13px; height: 13px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
 #all { position: absolute; right: 16px; bottom: 30px; z-index: 1000; border: 0; border-radius: 12px; padding: 12px 18px;
@@ -26,7 +26,7 @@ html, body, #map { margin: 0; height: 100%; background: #EEF1F6; font-family: sa
 <div class="bar">
   <b>거리가 아니라, 얼마나 돌아가는지</b>
   <span><i style="background:#0B9B83"></i>3분 이내</span>
-  <span><i style="background:#E9A100"></i>5분 이내</span>
+  <span><i style="background:#E9A100"></i>10분 이내</span>
   <span><i style="background:#9AA3B2"></i>그 이상</span>
   <span><i style="background:#F97316"></i>들렀다 가는 길</span>
 </div>

@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
     val places = parsePlaces(File(args[0]).readText())
     val p = Params()
     val osrm = Osrm(::get)
-    val limitsMin = listOf(1, 2, 3, 5)
+    val limitsMin = listOf(1, 2, 3, 5, 10)
     val rows = StringBuilder()
     val all = mutableListOf<Detour>()
     val bestPerTrip = mutableListOf<Double>()
@@ -62,7 +62,7 @@ fun main(args: Array<String>) {
         append("# 정할 값 보정 (calibration)\n\n")
         append("`./gradlew :core:calibrate`가 앱과 같은 코드(코리도 → OSRM table)로 실제 경로 ${trips.size}개를 돌린 결과입니다. ")
         append("출발 후 ${(WINDOW_M / 1000).toInt()} km(노랑 단계 SafeRange 수준) 안, 경로에서 ${p.corridorM.toInt()} m 이내 주유소를 최대 ${p.maxCandidates}곳 넣었습니다.\n\n")
-        append("| 경로 | 거리 km | 후보 | 최소 ΔT 분 | ΔT ≤ 1분 | ≤ 2분 | ≤ 3분 | ≤ 5분 |\n|---|---|---|---|---|---|---|---|\n")
+        append("| 경로 | 거리 km | 후보 | 최소 ΔT 분 | ΔT ≤ 1분 | ≤ 2분 | ≤ 3분 | ≤ 5분 | ≤ 10분 |\n|---|---|---|---|---|---|---|---|---|\n")
         append(rows)
         append("\n| ΔT 한도 | 후보가 1곳 이상인 경로 | 3곳 이상인 경로 | 그 후보들의 ΔD 중앙값 km | ΔD 90% km |\n|---|---|---|---|---|\n")
         for (l in limitsMin) {
@@ -71,7 +71,7 @@ fun main(args: Array<String>) {
         }
         append("\n앱 기본값 (`Params`): 최소 우회 ΔT ≤ ${(p.minDetourSec / 60).roundToInt()}분·ΔD ≤ ${p.minDetourM / 1000} km, ")
         append("최저가 ΔT ≤ ${(p.cheapSec / 60).roundToInt()}분·ΔD ≤ ${p.cheapM / 1000} km. ")
-        append("ΔT 한도는 모든 경로에서 후보가 3곳 이상 남는 가장 작은 값, ΔD 한도는 그 후보들의 ΔD 90% 근처로 잡았습니다. ")
+        append("최소 우회 ΔT 한도는 모든 경로에서 후보가 3곳 이상 남는 가장 작은 값이고, 최저가 ΔT 한도는 가격 선택지를 넓히려고 정한 값입니다. ΔD 한도는 각 ΔT 한도 안 후보들의 ΔD 90% 근처로 잡았습니다. ")
         append("ΔD 한도는 시간은 비슷해도 먼 길로 돌아가는 곳(연료를 더 쓰는 곳)을 거르는 용도입니다.\n")
         append("\n데이터: 경로 OSRM (OpenStreetMap, 실시간 교통 미반영), 주유소 오피넷 + OpenStreetMap 위치 (`tools/build_places.py`, docs/stations.md).\n")
     }

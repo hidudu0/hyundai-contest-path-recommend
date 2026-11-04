@@ -49,7 +49,7 @@ class EngineTest {
     }
 
     @Test fun cheapestIgnoresStationsBeyondItsBudget() {
-        val cheapButFar = detour("C", 8.0, price = 1700)
+        val cheapButFar = detour("C", 12.0, price = 1700)
         assertEquals("B", pick(listOf(a, b, cheapButFar), 96.0, Mode.CHEAPEST, Level.YELLOW, p)?.place?.id)
     }
 
