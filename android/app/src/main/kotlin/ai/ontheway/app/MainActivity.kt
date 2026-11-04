@@ -41,7 +41,7 @@ import kotlin.math.roundToInt
 // 시연 trip: from where the navigation says the car is (Pleos emulator default: 판교) down the 경부고속도로
 private val PANGYO = LatLon(37.4127, 127.0947)
 private val BUSAN = Dest("부산시청", LatLon(35.1798, 129.0750))
-private const val FOOD_AHEAD_M = 60_000.0 // DT·휴게소: the next hour or so of driving
+private const val FOOD_AHEAD_M = 60_000.0 // DT·음식점: the next hour or so of driving
 private const val RECOMPUTE_M = 15_000.0
 
 /**
@@ -122,7 +122,7 @@ class MainActivity : Activity() {
             "pleos.car.permission.NAVI_ROUTE", "pleos.car.permission.NAVI_ROUTE_SEARCH", "pleos.car.permission.TTS_SERVICE",
         ).filter { checkSelfPermission(it) != PackageManager.PERMISSION_GRANTED }
         if (wanted.isNotEmpty()) requestPermissions(wanted.toTypedArray(), 1)
-        note("주유소 ${places.count { it.kind == Kind.FUEL }}곳 (오피넷 ${pricesDate} 가격 ${places.count { it.verified }}곳) · DT·휴게소 ${places.count { it.kind == Kind.FOOD }}곳")
+        note("주유소 ${places.count { it.kind == Kind.FUEL }}곳 (오피넷 ${pricesDate} 가격 ${places.count { it.verified }}곳) · DT·음식점 ${places.count { it.kind != Kind.FUEL }}곳")
         render()
     }
 
@@ -198,7 +198,8 @@ class MainActivity : Activity() {
                 val route = osrm.route(from, dest.pos)
                 val len = route.line.lengthM
                 val fuelNear = corridor(route.line, 0.0, min(len, safeKm * 1000), places, Kind.FUEL, p.corridorM, p.maxCandidates)
-                val foodNear = corridor(route.line, 0.0, min(len, FOOD_AHEAD_M), places, Kind.FOOD, p.corridorM, 20)
+                // each kind gets its own quota: restaurants hug the road and would push rest areas out of one shared list
+                val foodNear = listOf(Kind.FOOD, Kind.EAT).flatMap { corridor(route.line, 0.0, min(len, FOOD_AHEAD_M), places, it, p.corridorM, 20) }
                 Plan(
                     from, dest, route,
                     osrm.detours(from, dest.pos, fuelNear).map { it.copy(price = it.place.price(fuel)) },
@@ -421,7 +422,7 @@ class MainActivity : Activity() {
         if (d == null || pl == null || s == null) {
             cardTag.text = when {
                 pl != null && tab == Kind.FUEL -> "SafeRange 안에 가는 길 주유소가 없어요"
-                pl != null -> "가는 길에 DT·휴게소가 없어요"
+                pl != null -> "가는 길에 DT·음식점이 없어요"
                 else -> "추천"
             }
             cardTag.setTextColor(Palette.faint)
@@ -457,7 +458,7 @@ class MainActivity : Activity() {
         cardMeta.text = "%+.1f km · %d km 앞".format(d.ddM / 1000, ahead)
         val fuelName = if (s.fuel == Fuel.DIESEL) "경유" else "휘발유"
         cardPrice.text = when {
-            d.place.kind == Kind.FOOD -> d.place.brand
+            d.place.kind != Kind.FUEL -> d.place.brand
             d.price != null -> listOfNotNull(d.place.brand.ifBlank { null }, if (d.place.self) "셀프" else null, "$fuelName %,d원".format(d.price))
                 .joinToString(" · ")
             else -> listOfNotNull(d.place.brand.ifBlank { null }, "가격 정보 없음 · 오피넷 미확인").joinToString(" · ")
@@ -477,7 +478,7 @@ class MainActivity : Activity() {
     }
 
     private var rowsKey = ""
-    private val rowRight = ArrayList<Pair<Detour, TextView>>()
+    private val rowRight = ArrayList<TextView>()
 
     /** Rebuilt only when the rows change: rebuilding every tick would swallow the driver's tap. */
     private fun rows(candidates: List<Detour>, picked: Detour?, safeKm: Double, carAlong: Double) {
@@ -489,22 +490,23 @@ class MainActivity : Activity() {
             else -> candidates.sortedBy { it.dtSec }
         }.take(6)
         fun right(d: Detour) = when {
-            d.place.kind == Kind.FOOD -> "${((d.alongM - carAlong) / 1000).roundToInt()} km 앞"
+            d.place.kind != Kind.FUEL -> "${((d.alongM - carAlong) / 1000).roundToInt()} km 앞"
             d.price != null -> "%,d원".format(d.price)
             else -> "가격 없음"
         }
         val key = listOf(tab, mode, picked?.place?.id, candidates.size).joinToString("|") + ordered.joinToString("|") {
-            "${it.place.id}:${minutes(it)}:${it.price}:${it.place.kind == Kind.FOOD || it.reachM <= safeKm * 1000}"
+            "${it.place.id}:${minutes(it)}:${it.price}:${it.place.kind != Kind.FUEL || it.reachM <= safeKm * 1000}"
         }
         if (key == rowsKey) {
-            rowRight.forEach { (d, view) -> view.text = right(d) }
+            // a new plan can keep the rows but moves alongM to its own start, so read this call's list
+            rowRight.forEachIndexed { i, view -> view.text = right(ordered[i]) }
             return
         }
         rowsKey = key
         rowRight.clear()
         list.removeAllViews()
         list.addView(TextView(this).apply {
-            text = if (candidates.isEmpty()) "" else "가는 길 ${if (tab == Kind.FUEL) "주유소" else "DT·휴게소"} ${candidates.size}곳 · " +
+            text = if (candidates.isEmpty()) "" else "가는 길 ${if (tab == Kind.FUEL) "주유소" else "DT·음식점"} ${candidates.size}곳 · " +
                 (if (tab == Kind.FUEL && mode == Mode.CHEAPEST) "가격 순" else "우회 시간 순") +
                 (if (tab == Kind.FUEL) " · 가격 오피넷 $pricesDate" else "")
             textSize = 20f
@@ -512,7 +514,7 @@ class MainActivity : Activity() {
             setPadding(16, 4, 16, 8)
         })
         for (d in ordered) {
-            val reachable = d.place.kind == Kind.FOOD || d.reachM <= safeKm * 1000
+            val reachable = d.place.kind != Kind.FUEL || d.reachM <= safeKm * 1000
             val row = LinearLayout(this).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
@@ -529,7 +531,7 @@ class MainActivity : Activity() {
             row.addView(cell(minutes(d), 110, 30f, dtColor(d), true))
             row.addView(cell(d.place.name, 0, 24f, Palette.navy, false), LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f))
             val r = cell(right(d), 0, 24f, if (d.price == null && d.place.kind == Kind.FUEL) Palette.faint else Palette.muted, false)
-            rowRight += d to r
+            rowRight += r
             row.addView(r)
             list.addView(row, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 70))
         }
