@@ -33,3 +33,11 @@ tasks.register<JavaExec>("calibrate") {
     mainClass.set("ai.ontheway.core.CalibrateKt")
     args(rootDir.resolve("app/src/main/assets/places.csv").absolutePath, rootDir.resolve("../docs/calibration.md").absolutePath)
 }
+
+// what choosing by detour saves against the closest-looking station (needs network; writes docs/savings.md)
+tasks.register<JavaExec>("savings") {
+    group = "verification"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("ai.ontheway.core.SavingsKt")
+    args(rootDir.resolve("app/src/main/assets/places.csv").absolutePath, rootDir.resolve("../docs/savings.md").absolutePath)
+}

@@ -13,7 +13,7 @@ class Net(private val dir: File) {
     fun get(url: String): String {
         val key = MessageDigest.getInstance("SHA-1").digest(url.toByteArray()).joinToString("") { "%02x".format(it) }
         val cached = File(dir, "http-$key")
-        if (cached.exists()) return cached.readText()
+        if (cached.length() > 0) return cached.readText()
         val c = URL(url).openConnection() as HttpURLConnection
         c.connectTimeout = 10_000
         c.readTimeout = 20_000
@@ -22,7 +22,8 @@ class Net(private val dir: File) {
             val ok = c.responseCode in 200..299
             val body = (if (ok) c.inputStream else c.errorStream ?: throw IOException("HTTP ${c.responseCode}"))
                 .bufferedReader().use { it.readText() }
-            if (ok) cached.writeText(body)
+            // via a temp file: an app killed mid-write must not leave a broken response behind for good
+            if (ok && body.isNotEmpty()) File(dir, "http-$key.tmp").run { writeText(body); renameTo(cached) }
             return body
         } finally {
             c.disconnect()

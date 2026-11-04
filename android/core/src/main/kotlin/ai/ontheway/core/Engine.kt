@@ -11,8 +11,8 @@ data class Params(
     val redKm: Double = 50.0,
     val minDetourSec: Double = 180.0, // calibrated: smallest limit that leaves ≥ 3 stations on every test route
     val minDetourM: Double = 2_000.0, // calibrated: ~90th percentile ΔD of those stations
-    val cheapSec: Double = 300.0, // wider budget for the cheapest mode
-    val cheapM: Double = 3_000.0, // calibrated: ~90th percentile ΔD within 5 min
+    val cheapSec: Double = 600.0, // wider budget for the cheapest mode
+    val cheapM: Double = 3_000.0, // calibrated: ~90th percentile ΔD within 10 min
     val corridorM: Double = 1_500.0,
     val maxCandidates: Int = 40,
 )
