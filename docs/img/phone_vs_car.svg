@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="338.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">왜 폰이 아니라 차여야 하나</text>
+<rect x="250" y="74" width="350" height="40" rx="10" fill="#F1F3F7"/>
+<text x="425" y="100" font-size="16" fill="#6B7280" font-weight="800" text-anchor="middle">휴대폰 앱</text>
+<rect x="622" y="74" width="350" height="40" rx="10" fill="#0B9B83"/>
+<text x="797" y="100" font-size="16" fill="#FFFFFF" font-weight="800" text-anchor="middle">가는길 (차량)</text>
+<text x="32" y="152" font-size="16" fill="#10285A" font-weight="700" text-anchor="start">남은 연료</text>
+<rect x="250" y="126" width="350" height="42" rx="10" fill="#FAFBFC" stroke="#E3E4EE" stroke-width="1"/>
+<text x="425" y="152" font-size="15" fill="#4B5563" font-weight="400" text-anchor="middle">별도 장치 없이 얻기 어려움</text>
+<rect x="622" y="126" width="350" height="42" rx="10" fill="#E6F6F2"/>
+<text x="797" y="152" font-size="15" fill="#1F2340" font-weight="600" text-anchor="middle">차에서 연료·연비·탱크를 바로 읽음</text>
+<text x="32" y="202" font-size="16" fill="#10285A" font-weight="700" text-anchor="start">주유 시점</text>
+<rect x="250" y="176" width="350" height="42" rx="10" fill="#FAFBFC" stroke="#E3E4EE" stroke-width="1"/>
+<text x="425" y="202" font-size="15" fill="#4B5563" font-weight="400" text-anchor="middle">운전자가 판단</text>
+<rect x="622" y="176" width="350" height="42" rx="10" fill="#E6F6F2"/>
+<text x="797" y="202" font-size="15" fill="#1F2340" font-weight="600" text-anchor="middle">목적지까지 남은 연료로 판단</text>
+<text x="32" y="252" font-size="16" fill="#10285A" font-weight="700" text-anchor="start">주유소 고르기</text>
+<rect x="250" y="226" width="350" height="42" rx="10" fill="#FAFBFC" stroke="#E3E4EE" stroke-width="1"/>
+<text x="425" y="252" font-size="15" fill="#4B5563" font-weight="400" text-anchor="middle">운전자가 검색·비교</text>
+<rect x="622" y="226" width="350" height="42" rx="10" fill="#E6F6F2"/>
+<text x="797" y="252" font-size="15" fill="#1F2340" font-weight="600" text-anchor="middle">늘어나는 시간으로 자동 선택</text>
+<text x="32" y="302" font-size="16" fill="#10285A" font-weight="700" text-anchor="start">경유지 넣기</text>
+<rect x="250" y="276" width="350" height="42" rx="10" fill="#FAFBFC" stroke="#E3E4EE" stroke-width="1"/>
+<text x="425" y="302" font-size="15" fill="#4B5563" font-weight="400" text-anchor="middle">화면 조작이나 음성 요청</text>
+<rect x="622" y="276" width="350" height="42" rx="10" fill="#E6F6F2"/>
+<text x="797" y="302" font-size="15" fill="#1F2340" font-weight="600" text-anchor="middle">내비에 바로 추가 + 음성 안내</text>
+</svg>

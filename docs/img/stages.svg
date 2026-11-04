@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="358.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">남은 거리로 단계를 정합니다</text>
+<text x="32" y="80" font-size="16" fill="#4B5563" font-weight="400" text-anchor="start">SafeRange = 남은 연료 × 연비 × 0.8</text>
+<rect x="28" y="104" width="310" height="128" rx="14" fill="#E6F6F2"/>
+<rect x="46" y="118" width="66" height="28" rx="14.0" fill="#0B9B83"/><text x="79.0" y="137.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">여유</text>
+<text x="124" y="138" font-size="15" fill="#0B9B83" font-weight="700" text-anchor="start">목적지까지 갈 수 있음</text>
+<text x="48" y="178" font-size="16" fill="#1F2340" font-weight="600" text-anchor="start">조용히 대기</text>
+<rect x="345" y="104" width="310" height="128" rx="14" fill="#FEF5DC"/>
+<rect x="363" y="118" width="66" height="28" rx="14.0" fill="#B47A00"/><text x="396.0" y="137.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">노랑</text>
+<text x="441" y="138" font-size="15" fill="#B47A00" font-weight="700" text-anchor="start">SafeRange ≤ 150 km</text>
+<text x="365" y="178" font-size="16" fill="#1F2340" font-weight="600" text-anchor="start">추천 + 음성 안내</text>
+<text x="365" y="203" font-size="16" fill="#1F2340" font-weight="600" text-anchor="start">탭하면 경유지 추가</text>
+<rect x="662" y="104" width="310" height="128" rx="14" fill="#FEE2E2"/>
+<rect x="680" y="118" width="66" height="28" rx="14.0" fill="#DC2626"/><text x="713.0" y="137.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">빨강</text>
+<text x="758" y="138" font-size="15" fill="#DC2626" font-weight="700" text-anchor="start">SafeRange ≤ 50 km</text>
+<text x="682" y="178" font-size="16" fill="#1F2340" font-weight="600" text-anchor="start">가장 덜 돌아가는 곳을</text>
+<text x="682" y="203" font-size="16" fill="#1F2340" font-weight="600" text-anchor="start">자동으로 경유지에 + 음성</text>
+<rect x="28" y="248" width="310" height="92" rx="14" fill="#F1F3F7"/>
+<text x="48" y="280" font-size="17" fill="#10285A" font-weight="800" text-anchor="start">최소 우회</text>
+<text x="318" y="280" font-size="13" fill="#6B7280" font-weight="600" text-anchor="end">기본</text>
+<text x="48" y="305" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">ΔT ≤ 3분 · ΔD ≤ 2 km</text>
+<text x="48" y="327" font-size="14" fill="#4B5563" font-weight="400" text-anchor="start">가장 덜 돌아가는 곳</text>
+<rect x="345" y="248" width="310" height="92" rx="14" fill="#F1F3F7"/>
+<text x="365" y="280" font-size="17" fill="#10285A" font-weight="800" text-anchor="start">최저가</text>
+<text x="635" y="280" font-size="13" fill="#6B7280" font-weight="600" text-anchor="end">탭</text>
+<text x="365" y="305" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">ΔT ≤ 10분 · ΔD ≤ 3 km</text>
+<text x="365" y="327" font-size="14" fill="#4B5563" font-weight="400" text-anchor="start">그 안에서 가장 싼 곳</text>
+<rect x="662" y="248" width="310" height="92" rx="14" fill="#F1F3F7"/>
+<text x="682" y="280" font-size="17" fill="#10285A" font-weight="800" text-anchor="start">DT·휴게소</text>
+<text x="952" y="280" font-size="13" fill="#6B7280" font-weight="600" text-anchor="end">탭</text>
+<text x="682" y="305" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">ΔT 순으로 정렬</text>
+<text x="682" y="327" font-size="14" fill="#4B5563" font-weight="400" text-anchor="start">같은 계산, 가격 없음</text>
+</svg>
