@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 456" width="1000" height="456" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="454.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">같은 엔진으로 들를 곳을 넓힙니다</text>
+<text x="32" y="80" font-size="16" fill="#4B5563" font-weight="400" text-anchor="start">거리를 보여 주는 지도가 아니라, 얼마나 돌아가는지 보여 주는 지도</text>
+<rect x="28" y="102" width="944" height="64" rx="14" fill="#10285A"/>
+<text x="500" y="130" font-size="15" fill="#C9D3E8" font-weight="700" text-anchor="middle">공통 엔진</text>
+<text x="500" y="154" font-size="18" fill="#FFFFFF" font-weight="800" text-anchor="middle">경로 → 가는 길 후보 수집 → ΔT·ΔD 계산 → 경유지 추가</text>
+<line x1="117" y1="166" x2="117" y2="186" stroke="#0B9B83" stroke-width="3"/>
+<rect x="28" y="186" width="178" height="172" rx="14" fill="#E6F6F2" stroke="#0B9B83" stroke-width="1.5"/>
+<rect x="42" y="198" width="54" height="25" rx="12.5" fill="#0B9B83"/><text x="69.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">구현</text>
+<text x="42" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">주유소</text>
+<text x="42" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">연료 제약: SafeRange</text>
+<text x="42" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">가격 비교: 최저가</text>
+<text x="42" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">6,904곳</text>
+<line x1="308" y1="166" x2="308" y2="186" stroke="#0B9B83" stroke-width="3"/>
+<rect x="219" y="186" width="178" height="172" rx="14" fill="#E6F6F2" stroke="#0B9B83" stroke-width="1.5"/>
+<rect x="233" y="198" width="54" height="25" rx="12.5" fill="#0B9B83"/><text x="260.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">구현</text>
+<text x="233" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">DT·휴게소</text>
+<text x="233" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">ΔT 순 정렬</text>
+<text x="233" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">양방향은 덜 도는 쪽</text>
+<text x="233" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">983곳</text>
+<line x1="499" y1="166" x2="499" y2="186" stroke="#EA580C" stroke-width="3"/>
+<rect x="410" y="186" width="178" height="172" rx="14" fill="#FFEDD5"/>
+<rect x="424" y="198" width="54" height="25" rx="12.5" fill="#EA580C"/><text x="451.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">확장</text>
+<text x="424" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">음식점·카페</text>
+<text x="424" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">장소 데이터만 추가</text>
+<text x="424" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">ΔT 순 정렬 그대로</text>
+<text x="424" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">영업시간 필터</text>
+<line x1="690" y1="166" x2="690" y2="186" stroke="#EA580C" stroke-width="3"/>
+<rect x="601" y="186" width="178" height="172" rx="14" fill="#FFEDD5"/>
+<rect x="615" y="198" width="54" height="25" rx="12.5" fill="#EA580C"/><text x="642.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">확장</text>
+<text x="615" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">전기차 충전소</text>
+<text x="615" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">SafeRange를</text>
+<text x="615" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">배터리·전비로</text>
+<text x="615" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">충전기 상태 추가</text>
+<line x1="881" y1="166" x2="881" y2="186" stroke="#EA580C" stroke-width="3"/>
+<rect x="792" y="186" width="178" height="172" rx="14" fill="#FFEDD5"/>
+<rect x="806" y="198" width="54" height="25" rx="12.5" fill="#EA580C"/><text x="833.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">확장</text>
+<text x="806" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">주문·픽업</text>
+<text x="806" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">도착 시간에 맞춰</text>
+<text x="806" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">미리 주문</text>
+<text x="806" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">제휴 매장 연결</text>
+<rect x="28" y="374" width="944" height="62" rx="14" fill="#F1F3F7"/>
+<text x="52" y="411" font-size="14" fill="#6B7280" font-weight="700" text-anchor="start">예시</text>
+<text x="104" y="411" font-size="15" fill="#10285A" font-weight="700" text-anchor="start">여행 중 밥 먹을 곳</text>
+<rect x="262" y="390" width="130" height="30" rx="15.0" fill="#0B9B83"/><text x="327.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+2분 DT 버거</text>
+<rect x="404" y="390" width="130" height="30" rx="15.0" fill="#0B9B83"/><text x="469.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+4분 DT 카페</text>
+<rect x="546" y="390" width="124" height="30" rx="15.0" fill="#6B7280"/><text x="608.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+11분 국밥집</text>
+<text x="948" y="411" font-size="14" fill="#4B5563" font-weight="400" text-anchor="end">후보를 하나씩 경유지로 넣어 볼 필요가 없습니다</text>
+</svg>

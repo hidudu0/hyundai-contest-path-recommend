@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 432" width="1000" height="432" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="430.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">Pleos SDK로 읽고, 계산하고, 내비에 넣습니다</text>
+<rect x="28" y="72" width="70" height="28" rx="14.0" fill="#1D4ED8"/><text x="63.0" y="91.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">읽기</text>
+<rect x="365" y="72" width="236" height="28" rx="14.0" fill="#10285A"/><text x="483.0" y="91.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">계산 · core (순수 Kotlin)</text>
+<rect x="702" y="72" width="70" height="28" rx="14.0" fill="#EA580C"/><text x="737.0" y="91.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">행동</text>
+<rect x="28" y="112" width="270" height="92" rx="14" fill="#E8EEFD"/>
+<text x="46" y="142" font-size="16" fill="#1D4ED8" font-weight="800" text-anchor="start">Pleos Vehicle SDK</text>
+<text x="46" y="166" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">registerFuelPercent</text>
+<text x="46" y="186" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">registerCurrentFuelEconomy</text>
+<line x1="302" y1="158" x2="352" y2="191.6" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M350 185.6 L361 191.6 L350 197.6 Z" fill="#4B5563"/>
+<rect x="28" y="216" width="270" height="92" rx="14" fill="#E8EEFD"/>
+<text x="46" y="246" font-size="16" fill="#1D4ED8" font-weight="800" text-anchor="start">AAOS CarPropertyManager</text>
+<text x="46" y="270" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">INFO_FUEL_CAPACITY</text>
+<text x="46" y="290" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">INFO_FUEL_TYPE</text>
+<line x1="302" y1="262" x2="352" y2="214" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M350 208 L361 214 L350 220 Z" fill="#4B5563"/>
+<rect x="28" y="320" width="270" height="92" rx="14" fill="#E8EEFD"/>
+<text x="46" y="350" font-size="16" fill="#1D4ED8" font-weight="800" text-anchor="start">Pleos NaviHelper</text>
+<text x="46" y="374" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">getCurrentLocationInfo</text>
+<text x="46" y="394" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">getDestinationInfo</text>
+<line x1="302" y1="366" x2="352" y2="274.8" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M350 268.8 L361 274.8 L350 280.8 Z" fill="#4B5563"/>
+<rect x="365" y="112" width="270" height="196" rx="14" fill="#F4F6FB" stroke="#10285A" stroke-width="1.5"/>
+<rect x="383" y="124" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="500" y="145" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">SafeRange</text>
+<rect x="383" y="160" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="500" y="181" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">노랑 · 빨강 단계</text>
+<rect x="383" y="196" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="500" y="217" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">코리도 후보 (도로 1.5 km 안)</text>
+<rect x="383" y="232" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="500" y="253" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">ΔT · ΔD</text>
+<rect x="383" y="268" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="500" y="289" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">최소 우회 · 최저가 선택</text>
+<rect x="365" y="320" width="270" height="92" rx="14" fill="#F1F3F7"/>
+<text x="383" y="350" font-size="15" fill="#10285A" font-weight="800" text-anchor="start">데이터</text>
+<text x="383" y="374" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">주유소 6,904곳 · DT·휴게소 983곳 내장</text>
+<text x="383" y="396" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">경로: OSRM (실제 도로망)</text>
+<line x1="500" y1="320" x2="500" y2="308" stroke="#4B5563" stroke-width="2.5"/>
+<rect x="702" y="112" width="270" height="92" rx="14" fill="#FFEDD5"/>
+<text x="720" y="142" font-size="16" fill="#EA580C" font-weight="800" text-anchor="start">Pleos NaviHelper</text>
+<text x="720" y="166" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">addWaypoint</text>
+<text x="720" y="186" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">requestRouteWithWaypoints</text>
+<line x1="639" y1="191.6" x2="689" y2="158" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M687 152 L698 158 L687 164 Z" fill="#4B5563"/>
+<rect x="702" y="216" width="270" height="92" rx="14" fill="#FFEDD5"/>
+<text x="720" y="246" font-size="16" fill="#EA580C" font-weight="800" text-anchor="start">Pleos TextToSpeech</text>
+<text x="720" y="270" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">ON_DEVICE 음성 안내</text>
+<line x1="639" y1="214" x2="689" y2="262" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M687 256 L698 262 L687 268 Z" fill="#4B5563"/>
+<rect x="702" y="320" width="270" height="92" rx="14" fill="#FFEDD5"/>
+<text x="720" y="350" font-size="16" fill="#EA580C" font-weight="800" text-anchor="start">지도</text>
+<text x="720" y="374" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">Leaflet + OpenStreetMap</text>
+<text x="720" y="394" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">실제 우회 경로 표시</text>
+<line x1="639" y1="274.8" x2="689" y2="366" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M687 360 L698 366 L687 372 Z" fill="#4B5563"/>
+</svg>

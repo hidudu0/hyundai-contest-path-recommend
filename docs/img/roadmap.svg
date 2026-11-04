@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 334" width="1000" height="334" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="332.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">프로토타입에서 내비 기본 기능까지</text>
+<text x="32" y="80" font-size="15" fill="#4B5563" font-weight="400" text-anchor="start">연도는 계획이며 가정입니다</text>
+<line x1="100" y1="128" x2="900" y2="128" stroke="#E3E4EE" stroke-width="6"/>
+<circle cx="100" cy="128" r="12" fill="#0B9B83"/>
+<text x="100" y="108" font-size="13" fill="#0B9B83" font-weight="700" text-anchor="middle">지금</text>
+<text x="100" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">프로토타입</text>
+<text x="100" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">앱·에뮬레이터 동작</text>
+<text x="100" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">오피넷 API 연결</text>
+<circle cx="260" cy="128" r="12" fill="#1D4ED8"/>
+<text x="260" y="108" font-size="13" fill="#1D4ED8" font-weight="700" text-anchor="middle">2027 상반기</text>
+<text x="260" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">상용 준비</text>
+<text x="260" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">시동 시 자동 감시</text>
+<text x="260" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">실시간 가격·교통</text>
+<circle cx="420" cy="128" r="12" fill="#1D4ED8"/>
+<text x="420" y="108" font-size="13" fill="#1D4ED8" font-weight="700" text-anchor="middle">2027 하반기</text>
+<text x="420" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">앱 마켓</text>
+<text x="420" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">Pleos App Market</text>
+<text x="420" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">실사용 지표 측정</text>
+<circle cx="580" cy="128" r="12" fill="#1D4ED8"/>
+<text x="580" y="108" font-size="13" fill="#1D4ED8" font-weight="700" text-anchor="middle">2028</text>
+<text x="580" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">내비 제휴</text>
+<text x="580" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">네이버지도·카카오내비</text>
+<text x="580" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">·티맵에 엔진 제공</text>
+<circle cx="740" cy="128" r="12" fill="#1D4ED8"/>
+<text x="740" y="108" font-size="13" fill="#1D4ED8" font-weight="700" text-anchor="middle">2029</text>
+<text x="740" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">대상 확대</text>
+<text x="740" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">충전소·음식점 추가</text>
+<text x="740" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">인카페이먼트 결제</text>
+<circle cx="900" cy="128" r="12" fill="#EA580C"/>
+<text x="900" y="108" font-size="13" fill="#EA580C" font-weight="700" text-anchor="middle">2030</text>
+<text x="900" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">최종 목표</text>
+<text x="900" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">내비 기본 기능</text>
+<text x="900" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">이후 글로벌 확대</text>
+<rect x="28" y="250" width="944" height="66" rx="14" fill="#FFEDD5" stroke="#EA580C" stroke-width="1.5"/>
+<text x="500" y="278" font-size="14" fill="#EA580C" font-weight="800" text-anchor="middle">최종 목표</text>
+<text x="500" y="303" font-size="17" fill="#10285A" font-weight="700" text-anchor="middle">앱을 열지 않아도 내비가 연료 부족을 판단해 최적 주유소 경유 경로를 자동으로 설정</text>
+</svg>
