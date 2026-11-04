@@ -59,7 +59,7 @@
 
 Pleos Connect Emulator v2.1.0 화면 녹화입니다(1분 42초, 컷 편집 없음). 소리는 없고, 음성 안내 문구는 화면 맨 아래 "음성" 줄에 표시됩니다.
 
-https://github.com/user-attachments/assets/4bebeac2-1238-4641-8212-1d6f64db00a3
+https://github.com/user-attachments/assets/95fbefb2-c413-4fac-a42a-93602c8fb905
 
 **0:04** 노랑 추천 · **0:21** 최저가 · **0:45** IC 우회 경로 · **0:54** 경유지 추가 · **1:06** 긴급 자동 경유지 · **1:19** 주유 후 여유 단계
 
