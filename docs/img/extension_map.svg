@@ -19,13 +19,13 @@
 <text x="233" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">ΔT 순 정렬</text>
 <text x="233" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">양방향은 덜 도는 쪽</text>
 <text x="233" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">983곳</text>
-<line x1="499" y1="166" x2="499" y2="186" stroke="#EA580C" stroke-width="3"/>
-<rect x="410" y="186" width="178" height="172" rx="14" fill="#FFEDD5"/>
-<rect x="424" y="198" width="54" height="25" rx="12.5" fill="#EA580C"/><text x="451.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">확장</text>
+<line x1="499" y1="166" x2="499" y2="186" stroke="#0B9B83" stroke-width="3"/>
+<rect x="410" y="186" width="178" height="172" rx="14" fill="#E6F6F2" stroke="#0B9B83" stroke-width="1.5"/>
+<rect x="424" y="198" width="54" height="25" rx="12.5" fill="#0B9B83"/><text x="451.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">구현</text>
 <text x="424" y="252" font-size="18" fill="#10285A" font-weight="800" text-anchor="start">음식점·카페</text>
-<text x="424" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">장소 데이터만 추가</text>
+<text x="424" y="282" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">브랜드 매장</text>
 <text x="424" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">ΔT 순 정렬 그대로</text>
-<text x="424" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">영업시간 필터</text>
+<text x="424" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">5,819곳</text>
 <line x1="690" y1="166" x2="690" y2="186" stroke="#EA580C" stroke-width="3"/>
 <rect x="601" y="186" width="178" height="172" rx="14" fill="#FFEDD5"/>
 <rect x="615" y="198" width="54" height="25" rx="12.5" fill="#EA580C"/><text x="642.0" y="215.18" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle">확장</text>
@@ -41,10 +41,9 @@
 <text x="806" y="305" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">미리 주문</text>
 <text x="806" y="328" font-size="14" fill="#1F2340" font-weight="400" text-anchor="start">제휴 매장 연결</text>
 <rect x="28" y="374" width="944" height="62" rx="14" fill="#F1F3F7"/>
-<text x="52" y="411" font-size="14" fill="#6B7280" font-weight="700" text-anchor="start">예시</text>
-<text x="104" y="411" font-size="15" fill="#10285A" font-weight="700" text-anchor="start">여행 중 밥 먹을 곳</text>
-<rect x="262" y="390" width="130" height="30" rx="15.0" fill="#0B9B83"/><text x="327.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+2분 DT 버거</text>
-<rect x="404" y="390" width="130" height="30" rx="15.0" fill="#0B9B83"/><text x="469.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+4분 DT 카페</text>
-<rect x="546" y="390" width="124" height="30" rx="15.0" fill="#6B7280"/><text x="608.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+11분 국밥집</text>
-<text x="948" y="411" font-size="14" fill="#4B5563" font-weight="400" text-anchor="end">후보를 하나씩 경유지로 넣어 볼 필요가 없습니다</text>
+<text x="52" y="411" font-size="14" fill="#6B7280" font-weight="700" text-anchor="start">앱 실측</text>
+<text x="118" y="411" font-size="15" fill="#10285A" font-weight="700" text-anchor="start">고속도로 위</text>
+<rect x="222" y="390" width="186" height="30" rx="15.0" fill="#0B9B83"/><text x="315.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+2분 · 25 km 앞</text>
+<rect x="420" y="390" width="186" height="30" rx="15.0" fill="#6B7280"/><text x="513.0" y="410.04" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">+14분 · 4 km 앞</text>
+<text x="948" y="411" font-size="14" fill="#4B5563" font-weight="400" text-anchor="end">가까운 곳이 아니라 덜 돌아가는 곳이 위로</text>
 </svg>

@@ -32,7 +32,7 @@
 <text x="500" y="289" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">최소 우회 · 최저가 선택</text>
 <rect x="365" y="320" width="270" height="92" rx="14" fill="#F1F3F7"/>
 <text x="383" y="350" font-size="15" fill="#10285A" font-weight="800" text-anchor="start">데이터</text>
-<text x="383" y="374" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">주유소 6,904곳 · DT·휴게소 983곳 내장</text>
+<text x="383" y="374" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">주유소 6,904곳 · DT·음식점 6,802곳 내장</text>
 <text x="383" y="396" font-size="13" fill="#1F2340" font-weight="400" text-anchor="start">경로: OSRM (실제 도로망)</text>
 <line x1="500" y1="320" x2="500" y2="308" stroke="#4B5563" stroke-width="2.5"/>
 <rect x="702" y="112" width="270" height="92" rx="14" fill="#FFEDD5"/>
