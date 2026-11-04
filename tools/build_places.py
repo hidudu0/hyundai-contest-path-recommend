@@ -19,7 +19,7 @@ boundary, most certain first:
 The error of 3 and 4 is measured against the stations placed by 1, and every step against the
 official positions, and written to docs/stations.md.
 A station none of these finds is left out rather than put in the wrong place.
-FOOD (drive-throughs, highway rest areas) still comes from OSM.
+FOOD (drive-throughs, highway rest areas) and EAT (brand restaurants and cafes) still come from OSM.
 """
 import csv
 import json
@@ -215,6 +215,9 @@ def main(basic_csv, price_csv, pbf):
             if services or drive:
                 pt = centre(f["geometry"])
                 food.append(f"FOOD,{f['id']},{pt.y:.6f},{pt.x:.6f},{name or '휴게소'},{(p.get('brand') or '').replace(',', ' ')},,,,osm")
+            elif name and p.get("brand"):  # ponytail: brands only, all ~94,000 named places would swamp the app; widen with a corridor pre-filter
+                pt = centre(f["geometry"])
+                food.append(f"EAT,{f['id']},{pt.y:.6f},{pt.x:.6f},{name},{p['brand'].replace(',', ' ')},,,,osm")
 
     def heading_to(pt, town):
         """How much the carriageway next to [pt] heads towards [town] (cosine); None if unknown."""
@@ -447,7 +450,7 @@ def main(basic_csv, price_csv, pbf):
                 "위치를 못 찾은 오피넷 주유소는 틀린 자리에 두지 않으려고 뺐습니다. 도로 시작점에서 번호 × 10 m로 놓는 방식과 "
                 "시군구 안 상표 소거 방식도 시험했지만 오차가 수 km라 쓰지 않았습니다.\n")
     print(f"방향 판정 {sum(side_checks)}/{len(side_checks)}")
-    print(f"{OUT}: {len(placed)}/{total} 오피넷 주유소 {dict(how)} + OSM {len(extra)}, {len(set(food))} DT·휴게소; 빠짐 {dict(reasons)}; "
+    print(f"{OUT}: {len(placed)}/{total} 오피넷 주유소 {dict(how)} + OSM {len(extra)}, {sum(r.startswith('FOOD') for r in set(food))} DT·휴게소, {sum(r.startswith('EAT') for r in set(food))} 음식점; 빠짐 {dict(reasons)}; "
           + "; ".join(f"{k} 오차 중앙 {pct(e, .5):.0f} m / 90% {pct(e, .9):.0f} m (n={len(e)})" for k, e in errors.items() if e)
           + "; 공식 좌표 대비 " + "; ".join(f"{k} 중앙 {pct(e, .5):.0f} m, 1 km 초과 {sum(x > 1000 for x in e)}/{len(e)}" for k, e in off_by.items()))
 

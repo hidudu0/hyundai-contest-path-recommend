@@ -26,7 +26,7 @@
 <circle cx="740" cy="128" r="12" fill="#1D4ED8"/>
 <text x="740" y="108" font-size="13" fill="#1D4ED8" font-weight="700" text-anchor="middle">2029</text>
 <text x="740" y="168" font-size="16" fill="#10285A" font-weight="800" text-anchor="middle">대상 확대</text>
-<text x="740" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">충전소·음식점 추가</text>
+<text x="740" y="194" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">충전소 추천 추가</text>
 <text x="740" y="215" font-size="12.5" fill="#4B5563" font-weight="400" text-anchor="middle">인카페이먼트 결제</text>
 <circle cx="900" cy="128" r="12" fill="#EA580C"/>
 <text x="900" y="108" font-size="13" fill="#EA580C" font-weight="700" text-anchor="middle">2030</text>

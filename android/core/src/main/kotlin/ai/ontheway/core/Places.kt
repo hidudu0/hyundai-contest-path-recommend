@@ -2,8 +2,8 @@ package ai.ontheway.core
 
 import kotlin.math.cos
 
-/** FUEL: 주유소. FOOD: 드라이브스루·휴게소 (no price, ranked by detour only). */
-enum class Kind { FUEL, FOOD }
+/** FUEL: 주유소. FOOD: 드라이브스루·휴게소. EAT: 브랜드 음식점·카페. FOOD and EAT have no price and rank by detour only. */
+enum class Kind { FUEL, FOOD, EAT }
 
 enum class Fuel { GASOLINE, DIESEL }
 
