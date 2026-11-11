@@ -60,7 +60,7 @@
 
 ## 6. 사업성
 
-<img src="docs/img/business_flow.png" width="100%" alt="B2B 구조: 팀 CRAVE가 길목 엔진(남은 연료 → 단계, 가는 길 ΔT 계산, 경유지 자동 설정)을 공급하고 현대차그룹이 Pleos Connect 내비 기본 기능으로 탑재. CRAVE → 현대차그룹: Pleos 앱 → 내비 기본 기능, 앱 마켓 입점 후 엔진 라이선스(협의). 현대차그룹 → CRAVE: 차량 신호·내비 경유지 연동·배포(Vehicle SDK, NaviHelper, Pleos App Market). 운전자는 무료(1대 연 1.4시간, 3.5만원 절약, 가정), 주유소·DT는 인카페이먼트 결제 연동 시 리터당 수수료(가정, 2030년 연 23억원 시나리오)">
+<img src="docs/img/business_flow.png" width="100%" alt="B2B 구조: 팀 CRAVE가 길목 엔진(남은 연료 → 단계, 가는 길 ΔT 계산, 경유지 자동 설정)을 공급하고 현대차그룹이 Pleos Connect 내비 기본 기능으로 탑재. CRAVE → 현대차그룹: Pleos 앱 → 내비 기본 기능, 앱 마켓 입점 후 엔진 라이선스(협의). 현대차그룹 → CRAVE: 차량 신호·내비 경유지 연동·배포(Vehicle SDK, NaviHelper, Pleos App Market). 주유소·DT는 인카페이먼트 결제 연동 시 리터당 수수료(가정, 2030년 연 23억원 시나리오)">
 
 <img src="docs/img/target_mau.png" width="100%" alt="예상 MAU 상한: 국내 등록 차량 2,667.6만 대 → 연료차 2,352.4만 대(88%) → 2030년 Pleos 탑재 국내 연료차 242만 대(가정) → MAU 209만(그 달 1회 이상 이용 86.5%, 월 주유 2.8회 + DT 0.3회) · 지금 설치 가능한 차 5.3만 대">
 
@@ -70,8 +70,6 @@
 
 <details>
 <summary>수익 모델과 사업성 지표</summary>
-
-사용자에게는 무료로 제공하고 광고비로 추천 순서를 바꾸지 않습니다.
 
 | 지표 | 값 | 기준 |
 |---|---|---|
