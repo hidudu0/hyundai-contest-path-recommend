@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 322" width="1000" height="322" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
-<rect x="0.75" y="0.75" width="998.5" height="320.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
+<rect x="0.75" y="0.75" width="998.5" height="398.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
 <text x="32" y="50" font-size="26" fill="#10285A" font-weight="800" text-anchor="start">직선으로 가까운 곳이 아니라, 덜 늦어지는 곳</text>
 <text x="32" y="80" font-size="16" fill="#4B5563" font-weight="400" text-anchor="start">같은 휴게소도 방향에 따라 다릅니다 · 앱 측정값</text>
+<g transform="translate(-38 -34) scale(1.35)">
 <path d="M60 182 H660" stroke="#CBD2DE" stroke-width="16" stroke-linecap="round"/>
 <path d="M60 222 H660" stroke="#10285A" stroke-width="16" stroke-linecap="round"/>
 <text x="72" y="170" font-size="13" fill="#6B7280" font-weight="600" text-anchor="start">반대 방향</text>
@@ -17,11 +18,5 @@
 <rect x="296" y="104" width="196" height="32" rx="16.0" fill="#EA580C"/><text x="394.0" y="125.4" font-size="15" fill="#FFFFFF" font-weight="700" text-anchor="middle">+12분 반대 방향 휴게소</text>
 <path d="M388 158 L335 234" stroke="#9AA3B2" stroke-width="1.5" stroke-dasharray="4 4"/>
 <text x="372" y="202" font-size="13" fill="#4B5563" font-weight="600" text-anchor="start">직선으로는 둘 다 가까움</text>
-<rect x="768" y="104" width="204" height="196" rx="14" fill="#F1F3F7"/>
-<text x="786" y="138" font-size="16" fill="#10285A" font-weight="800" text-anchor="start">늘어나는 시간</text>
-<text x="786" y="166" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">ΔT = 들렀다 가는 시간</text>
-<text x="818" y="188" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">− 원래 시간</text>
-<text x="786" y="228" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">ΔD = 들렀다 가는 거리</text>
-<text x="818" y="250" font-size="14" fill="#1F2340" font-weight="600" text-anchor="start">− 원래 거리</text>
-<text x="786" y="284" font-size="13" fill="#4B5563" font-weight="400" text-anchor="start">IC·U턴까지 반영</text>
+</g>
 </svg>

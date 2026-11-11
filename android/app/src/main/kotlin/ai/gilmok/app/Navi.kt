@@ -1,7 +1,7 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
-import ai.ontheway.core.LatLon
-import ai.ontheway.core.Place
+import ai.gilmok.core.LatLon
+import ai.gilmok.core.Place
 import ai.pleos.playground.navi.constants.NaviErrorCode
 import ai.pleos.playground.navi.constants.WaypointIndex
 import ai.pleos.playground.navi.data.CurrentLocationInfo

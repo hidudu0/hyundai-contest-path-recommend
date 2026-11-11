@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가는길"
+            android:text="길목"
             android:textColor="#10285A"
             android:textSize="34sp"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
             android:textColor="#4B5563"
             android:textSize="24sp" />
 
-        <ai.ontheway.app.FuelBar
+        <ai.gilmok.app.FuelBar
             android:id="@+id/fuelBar"
             android:layout_width="match_parent"
             android:layout_height="76dp"
@@ -144,7 +144,7 @@
             <TextView android:id="@+id/modeCheap" style="@style/Tab" android:layout_marginStart="10dp" android:text="최저가" />
         </LinearLayout>
 
-        <ai.ontheway.app.MapView
+        <ai.gilmok.app.MapView
             android:id="@+id/map"
             android:layout_width="match_parent"
             android:layout_height="0dp"

@@ -1,11 +1,11 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
-import ai.ontheway.core.Fuel
-import ai.ontheway.core.Kind
-import ai.ontheway.core.Params
-import ai.ontheway.core.Place
-import ai.ontheway.core.Route
-import ai.ontheway.core.LatLon
+import ai.gilmok.core.Fuel
+import ai.gilmok.core.Kind
+import ai.gilmok.core.Params
+import ai.gilmok.core.Place
+import ai.gilmok.core.Route
+import ai.gilmok.core.LatLon
 import ai.pleos.playground.vehicle.Vehicle
 import ai.pleos.playground.vehicle.listener.FuelEconomyListener
 import ai.pleos.playground.vehicle.listener.FuelPercentListener
@@ -19,7 +19,7 @@ import android.util.Log
 import kotlin.math.max
 import kotlin.math.min
 
-private const val TAG = "OnTheWay"
+private const val TAG = "Gilmok"
 private const val ASSUMED_FUEL_PCT = 25
 
 /**

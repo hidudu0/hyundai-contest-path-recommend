@@ -1,23 +1,23 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
-import ai.ontheway.core.Detour
-import ai.ontheway.core.Kind
-import ai.ontheway.core.LatLon
-import ai.ontheway.core.Level
-import ai.ontheway.core.Mode
-import ai.ontheway.core.Osrm
-import ai.ontheway.core.Params
-import ai.ontheway.core.Place
-import ai.ontheway.core.Route
-import ai.ontheway.core.corridor
-import ai.ontheway.core.detourLeg
-import ai.ontheway.core.distM
-import ai.ontheway.core.Fuel
-import ai.ontheway.core.level
-import ai.ontheway.core.parsePlaces
-import ai.ontheway.core.pick
-import ai.ontheway.core.safeRangeKm
-import ai.ontheway.core.savingWon
+import ai.gilmok.core.Detour
+import ai.gilmok.core.Kind
+import ai.gilmok.core.LatLon
+import ai.gilmok.core.Level
+import ai.gilmok.core.Mode
+import ai.gilmok.core.Osrm
+import ai.gilmok.core.Params
+import ai.gilmok.core.Place
+import ai.gilmok.core.Route
+import ai.gilmok.core.corridor
+import ai.gilmok.core.detourLeg
+import ai.gilmok.core.distM
+import ai.gilmok.core.Fuel
+import ai.gilmok.core.level
+import ai.gilmok.core.parsePlaces
+import ai.gilmok.core.pick
+import ai.gilmok.core.safeRangeKm
+import ai.gilmok.core.savingWon
 import ai.pleos.playground.vehicle.Vehicle
 import android.app.Activity
 import android.content.Intent
@@ -304,7 +304,7 @@ class MainActivity : Activity() {
             pill(if (source == null && sourceName == "") "신호를 고르세요" else "신호 대기 중", Color.parseColor("#F1F3F7"), Palette.muted)
             fuelPct.text = "—"
             fuelL.text = ""
-            fuelBar.set(0.0, 0.0, 0.0)
+            fuelBar.set(0.0, Palette.faint)
             safe.text = "—"
             formula.text = "남은 연료(L) × 연비(km/L) × ${p.safety}"
             toDest.text = ""
@@ -317,14 +317,13 @@ class MainActivity : Activity() {
         val safeKm = safeRangeKm(s.fuelL, s.kmPerL, p)
         when (lvl) {
             Level.OK -> pill("여유 있어요", Palette.mint, Palette.teal)
-            Level.YELLOW -> pill("노랑 · 주유 추천", Palette.yellowBg, Color.parseColor("#9A6A00"))
-            Level.RED -> pill("빨강 · 긴급", Palette.redBg, Palette.red)
+            Level.YELLOW -> pill("경고 · 주유 추천", Palette.yellowBg, Color.parseColor("#9A6A00"))
+            Level.RED -> pill("위험 · 자동 경유지", Palette.redBg, Palette.red)
         }
         fuelPct.text = "${pct.roundToInt()}%"
         fuelL.text = if (s.fuelAssumed) "연료 신호 없음 · ${pct.roundToInt()}% 가정값"
         else "%.1f L / %.0f L · 연비 %.1f km/L".format(s.fuelL, s.tankL, s.kmPerL)
-        val fullKm = s.tankL * s.kmPerL * p.safety
-        fuelBar.set(pct, p.redKm / fullKm, p.yellowKm / fullKm)
+        fuelBar.set(pct, when (lvl) { Level.OK -> Palette.teal; Level.YELLOW -> Palette.yellow; Level.RED -> Palette.red })
         safe.text = "${safeKm.roundToInt()} km"
         formula.text = "%.1f L × %.1f km/L × %.1f".format(s.fuelL, s.kmPerL, p.safety)
         toDest.text = s.dest?.let { d -> s.toDestM?.let { "${d.name}까지 ${(it / 1000).roundToInt()} km" } ?: d.name }

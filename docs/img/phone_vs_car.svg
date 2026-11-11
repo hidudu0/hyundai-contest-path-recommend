@@ -4,7 +4,7 @@
 <rect x="250" y="74" width="350" height="40" rx="10" fill="#F1F3F7"/>
 <text x="425" y="100" font-size="16" fill="#6B7280" font-weight="800" text-anchor="middle">휴대폰 앱</text>
 <rect x="622" y="74" width="350" height="40" rx="10" fill="#0B9B83"/>
-<text x="797" y="100" font-size="16" fill="#FFFFFF" font-weight="800" text-anchor="middle">가는길 (차량)</text>
+<text x="797" y="100" font-size="16" fill="#FFFFFF" font-weight="800" text-anchor="middle">길목 (차량)</text>
 <text x="32" y="152" font-size="16" fill="#10285A" font-weight="700" text-anchor="start">남은 연료</text>
 <rect x="250" y="126" width="350" height="42" rx="10" fill="#FAFBFC" stroke="#E3E4EE" stroke-width="1"/>
 <text x="425" y="152" font-size="15" fill="#4B5563" font-weight="400" text-anchor="middle">별도 장치 없이 얻기 어려움</text>

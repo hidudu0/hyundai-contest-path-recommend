@@ -1,4 +1,4 @@
-package ai.ontheway.core
+package ai.gilmok.core
 
 import org.json.JSONArray
 import org.json.JSONObject
