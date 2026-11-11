@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 662" width="960" height="662" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="14" role="img"><title>다른 주유소 안내 서비스와 기능 비교</title>
+<rect x="0.75" y="0.75" width="958.5" height="660.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
+<rect x="28" y="88" width="904" height="44" rx="10" fill="#F6F8FC"/>
+<rect x="28" y="180" width="904" height="44" rx="10" fill="#F6F8FC"/>
+<rect x="28" y="272" width="904" height="44" rx="10" fill="#F6F8FC"/>
+<rect x="28" y="364" width="904" height="44" rx="10" fill="#F6F8FC"/>
+<rect x="28" y="410" width="904" height="44" rx="12" fill="#FFFBEB" stroke="#F5D96B" stroke-width="1"/>
+<rect x="28" y="456" width="904" height="44" rx="12" fill="#E6F6F2" stroke="#A7DFD2" stroke-width="1"/>
+<rect x="658" y="30" width="92" height="472" rx="10" fill="#0B9B83" fill-opacity="0.07"/>
+<text x="704" y="46" font-size="11.5" fill="#0B9B83" text-anchor="middle" font-weight="700">고르는 기준</text>
+<rect x="762" y="30" width="92" height="472" rx="10" fill="#0B9B83" fill-opacity="0.07"/>
+<text x="808" y="46" font-size="11.5" fill="#0B9B83" text-anchor="middle" font-weight="700">조치</text>
+<text x="392" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">차 신호</text>
+<text x="496" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">주유 시점</text>
+<text x="600" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">가는 길 후보</text>
+<text x="704" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">늘어나는 시간</text>
+<text x="808" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">자동 경유지</text>
+<text x="880" y="64" font-size="13.5" fill="#10285A" text-anchor="middle" font-weight="700">상태</text>
+<line x1="28" y1="78" x2="932" y2="78" stroke="#E3E4EE" stroke-width="1"/>
+<text x="46" y="116" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">네이버지도</text>
+<text x="126.9" y="116" font-size="12" fill="#4B5563" text-anchor="start">휴대폰 · 경로 주변 가격순</text>
+<circle cx="392" cy="111" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="111" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="111" r="11" fill="#16A34A"/>
+<path d="M595 111l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="111" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="111" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="99" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="115.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="162" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">카카오내비</text>
+<text x="126.9" y="162" font-size="12" fill="#4B5563" text-anchor="start">휴대폰 · 경로상 최저가</text>
+<circle cx="392" cy="157" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="157" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="157" r="11" fill="#16A34A"/>
+<path d="M595 157l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="157" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="157" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="145" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="161.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="208" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">티맵 음성 안내</text>
+<text x="149.3" y="208" font-size="12" fill="#4B5563" text-anchor="start">에이닷, 2025</text>
+<circle cx="392" cy="203" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="203" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="203" r="11" fill="#16A34A"/>
+<path d="M595 203l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="203" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="203" r="10" fill="#FFFFFF" stroke="#EAB308" stroke-width="2"/>
+<path d="M808 194A9 9 0 0 1 808 212z" fill="#EAB308"/>
+<rect x="858.1" y="191" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="207.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="254" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">티맵 주행중 어디갈까</text>
+<text x="190.7" y="254" font-size="12" fill="#4B5563" text-anchor="start">DT · 음식점, 2026</text>
+<circle cx="392" cy="249" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="249" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="249" r="11" fill="#16A34A"/>
+<path d="M595 249l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="249" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="249" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="237" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="253.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="300" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">현대차 순정 내비</text>
+<text x="163.1" y="300" font-size="12" fill="#4B5563" text-anchor="start">ccNC · 주변 검색 · 유가</text>
+<circle cx="392" cy="295" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="295" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="295" r="4" fill="#CDD3E0"/>
+<circle cx="704" cy="295" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="295" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="283" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="299.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="346" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">현대차 EV 경로 플래너</text>
+<text x="198.1" y="346" font-size="12" fill="#4B5563" text-anchor="start">전기차 전용, 2025</text>
+<circle cx="392" cy="341" r="11" fill="#16A34A"/>
+<path d="M387 341l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="496" cy="341" r="11" fill="#16A34A"/>
+<path d="M491 341l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="600" cy="341" r="11" fill="#16A34A"/>
+<path d="M595 341l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="341" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="341" r="10" fill="#FFFFFF" stroke="#EAB308" stroke-width="2"/>
+<path d="M808 332A9 9 0 0 1 808 350z" fill="#EAB308"/>
+<rect x="858.1" y="329" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="345.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="392" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">Google 지도</text>
+<text x="140.4" y="392" font-size="12" fill="#4B5563" text-anchor="start">경로 따라 검색 · 해외</text>
+<circle cx="392" cy="387" r="4" fill="#CDD3E0"/>
+<circle cx="496" cy="387" r="4" fill="#CDD3E0"/>
+<circle cx="600" cy="387" r="11" fill="#16A34A"/>
+<path d="M595 387l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="387" r="11" fill="#16A34A"/>
+<path d="M699 387l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="808" cy="387" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="375" width="43.8" height="24" rx="12" fill="#DCFCE7" stroke="#DCFCE7" stroke-width="1"/>
+<text x="880" y="391.5" font-size="12.5" fill="#16A34A" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="438" font-size="14.5" fill="#1F2340" text-anchor="start" font-weight="700">네이버 오토앱</text>
+<text x="145.0" y="438" font-size="12" fill="#4B5563" text-anchor="start">Pleos Connect, 2026</text>
+<circle cx="392" cy="433" r="11" fill="#16A34A"/>
+<path d="M387 433l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="496" cy="433" r="10" fill="#FFFFFF" stroke="#EAB308" stroke-width="2"/>
+<path d="M496 424A9 9 0 0 1 496 442z" fill="#EAB308"/>
+<circle cx="600" cy="433" r="4" fill="#CDD3E0"/>
+<circle cx="704" cy="433" r="4" fill="#CDD3E0"/>
+<circle cx="808" cy="433" r="4" fill="#CDD3E0"/>
+<rect x="858.1" y="421" width="43.8" height="24" rx="12" fill="#FFFFFF" stroke="#F5D96B" stroke-width="1"/>
+<text x="880" y="437.5" font-size="12.5" fill="#B45309" text-anchor="middle" font-weight="700">양산</text>
+<text x="46" y="484" font-size="14.5" fill="#0B9B83" text-anchor="start" font-weight="700">길목</text>
+<text x="85.5" y="484" font-size="12" fill="#4B5563" text-anchor="start">Pleos Connect</text>
+<circle cx="392" cy="479" r="11" fill="#0B9B83"/>
+<path d="M387 479l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="496" cy="479" r="11" fill="#0B9B83"/>
+<path d="M491 479l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="600" cy="479" r="11" fill="#0B9B83"/>
+<path d="M595 479l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="704" cy="479" r="11" fill="#0B9B83"/>
+<path d="M699 479l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="808" cy="479" r="11" fill="#0B9B83"/>
+<path d="M803 479l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="852.2" y="467" width="55.6" height="24" rx="12" fill="#0B9B83" stroke="#0B9B83" stroke-width="1"/>
+<text x="880" y="483.5" font-size="12.5" fill="#FFFFFF" text-anchor="middle" font-weight="700">시제품</text>
+<circle cx="46" cy="526" r="11" fill="#16A34A"/>
+<path d="M41 526l3.5 3.5 6.5-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="62" y="530.5" font-size="12.5" fill="#1F2340">있음</text>
+<circle cx="110" cy="526" r="10" fill="#FFFFFF" stroke="#EAB308" stroke-width="2"/>
+<path d="M110 517A9 9 0 0 1 110 535z" fill="#EAB308"/>
+<text x="126" y="530.5" font-size="12.5" fill="#1F2340">일부 · 운전자가 요청</text>
+<circle cx="250" cy="526" r="4" fill="#CDD3E0"/>
+<text x="262" y="530.5" font-size="12.5" fill="#1F2340">없음 · 공개 자료에서 확인 못 함</text>
+<line x1="28" y1="544" x2="932" y2="544" stroke="#E3E4EE" stroke-width="1"/>
+<text x="46" y="568" font-size="12.5" fill="#10285A" font-weight="700">네이버 오토앱</text>
+<text x="129.0" y="568" font-size="12.5" fill="#1F2340">플레오스 커넥트 기본 앱(더 뉴 그랜저, 2026-06-26 발표) · 연료·배터리가 부족하면 인근 주유소·충전소 추천</text>
+<text x="46" y="590" font-size="12.5" fill="#B45309" font-weight="700">겹침</text>
+<text x="77.8" y="590" font-size="12.5" fill="#1F2340">네이버 오토앱도 차에서 남은 연료를 읽고 주유소를 추천함 · Google 지도는 늘어나는 시간을, EV 경로 플래너는 배터리로 충전 장소를 보여 줌</text>
+<text x="46" y="612" font-size="12.5" fill="#0B9B83" font-weight="700">다름</text>
+<text x="77.8" y="612" font-size="12.5" fill="#1F2340">길목은 연료차의 남은 거리로 주유 시점을 정하고, 가는 길 주유소를 늘어나는 시간으로 골라, 위험 단계면 경유지를 자동으로 넣음</text>
+<text x="46.0" y="634" font-size="12.5" fill="#4B5563">출처: 네이버 보도자료(2026-06) · Google 지도 블로그(2016-02) · 뉴시스(2025-04) · SKT·티맵 보도(2025-09) · CEO스코어데일리(2026-05) · 각 앱 화면(2026-11-11)</text>
+</svg>
