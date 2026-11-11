@@ -1,4 +1,4 @@
-package ai.ontheway.core
+package ai.gilmok.core
 
 import java.io.File
 import java.net.HttpURLConnection
@@ -30,7 +30,7 @@ internal fun get(url: String): String {
     Thread.sleep(maxOf(0L, 1100 - (System.currentTimeMillis() - last))) // public OSRM: about 1 request per second
     last = System.currentTimeMillis()
     val c = URL(url).openConnection() as HttpURLConnection
-    c.setRequestProperty("User-Agent", "OnTheWay-calibration/0.1 (Hyundai in-car app contest prototype)")
+    c.setRequestProperty("User-Agent", "Gilmok-calibration/0.1 (Hyundai in-car app contest prototype)")
     return (if (c.responseCode in 200..299) c.inputStream else c.errorStream).bufferedReader().use { it.readText() }
 }
 

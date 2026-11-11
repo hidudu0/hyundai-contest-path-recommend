@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" font-size="15">
 <rect x="0.75" y="0.75" width="998.5" height="358.5" rx="16" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
-<text x="32" y="52" font-size="27" fill="#10285A" font-weight="800" text-anchor="start">가는길이 연료를 보고, 덜 돌아가는 주유소를 내비에 넣습니다</text>
+<text x="32" y="52" font-size="27" fill="#10285A" font-weight="800" text-anchor="start">길목이 연료를 보고, 덜 돌아가는 주유소를 내비에 넣습니다</text>
 <text x="32" y="84" font-size="16" fill="#4B5563" font-weight="400" text-anchor="start">목적지까지 갈 수 있으면 조용히 있습니다</text>
 <rect x="28" y="108" width="290" height="132" rx="14" fill="#E8EEFD"/>
 <text x="48" y="146" font-size="20" fill="#1D4ED8" font-weight="800" text-anchor="start">① 남은 연료 판단</text>
@@ -12,13 +12,13 @@
 <text x="375" y="203" font-size="15" fill="#1F2340" font-weight="400" text-anchor="start">들렀다 가면 몇 분 늦어지는지 계산</text>
 <rect x="682" y="108" width="290" height="132" rx="14" fill="#FFEDD5"/>
 <text x="702" y="146" font-size="20" fill="#EA580C" font-weight="800" text-anchor="start">③ 경유지 추가</text>
-<text x="702" y="178" font-size="15" fill="#1F2340" font-weight="400" text-anchor="start">노랑: 추천과 음성 안내</text>
-<text x="702" y="203" font-size="15" fill="#1F2340" font-weight="400" text-anchor="start">빨강: 내비 경유지에 자동 추가</text>
+<text x="702" y="178" font-size="15" fill="#1F2340" font-weight="400" text-anchor="start">경고: 추천과 음성 안내</text>
+<text x="702" y="203" font-size="15" fill="#1F2340" font-weight="400" text-anchor="start">위험: 내비 경유지에 자동 추가</text>
 <line x1="322" y1="174" x2="342" y2="174" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M340 168 L351 174 L340 180 Z" fill="#4B5563"/>
 <line x1="649" y1="174" x2="669" y2="174" stroke="#4B5563" stroke-width="2.5" stroke-linecap="round"/><path d="M667 168 L678 174 L667 180 Z" fill="#4B5563"/>
 <rect x="28" y="258" width="944" height="84" rx="14" fill="#F1F3F7"/>
 <text x="52" y="298" font-size="28" fill="#0B9B83" font-weight="800" text-anchor="start">+0.2분</text>
-<text x="150" y="290" font-size="15" fill="#1F2340" font-weight="700" text-anchor="start">가는길의 우회 시간</text>
+<text x="150" y="290" font-size="15" fill="#1F2340" font-weight="700" text-anchor="start">길목의 우회 시간</text>
 <text x="150" y="313" font-size="14" fill="#4B5563" font-weight="400" text-anchor="start">직선 최단 주유소는 +7.1분</text>
 <text x="452" y="298" font-size="28" fill="#0B9B83" font-weight="800" text-anchor="start">2,882원</text>
 <text x="570" y="290" font-size="15" fill="#1F2340" font-weight="700" text-anchor="start">최저가 모드 1회 절약</text>

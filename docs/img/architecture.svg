@@ -23,7 +23,7 @@
 <rect x="383" y="124" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
 <text x="500" y="145" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">SafeRange</text>
 <rect x="383" y="160" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
-<text x="500" y="181" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">노랑 · 빨강 단계</text>
+<text x="500" y="181" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">경고 · 위험 단계</text>
 <rect x="383" y="196" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>
 <text x="500" y="217" font-size="14" fill="#10285A" font-weight="700" text-anchor="middle">코리도 후보 (도로 1.5 km 안)</text>
 <rect x="383" y="232" width="234" height="30" rx="8" fill="#FFFFFF" stroke="#E3E4EE" stroke-width="1.5"/>

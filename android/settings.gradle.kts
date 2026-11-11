@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "OnTheWay"
+rootProject.name = "Gilmok"
 include(":core", ":app")

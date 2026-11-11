@@ -1,4 +1,4 @@
-package ai.ontheway.core
+package ai.gilmok.core
 
 import kotlin.math.cos
 

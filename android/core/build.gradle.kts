@@ -30,7 +30,7 @@ tasks.test {
 tasks.register<JavaExec>("calibrate") {
     group = "verification"
     classpath = sourceSets["test"].runtimeClasspath
-    mainClass.set("ai.ontheway.core.CalibrateKt")
+    mainClass.set("ai.gilmok.core.CalibrateKt")
     args(rootDir.resolve("app/src/main/assets/places.csv").absolutePath, rootDir.resolve("../docs/calibration.md").absolutePath)
 }
 
@@ -38,6 +38,6 @@ tasks.register<JavaExec>("calibrate") {
 tasks.register<JavaExec>("savings") {
     group = "verification"
     classpath = sourceSets["test"].runtimeClasspath
-    mainClass.set("ai.ontheway.core.SavingsKt")
+    mainClass.set("ai.gilmok.core.SavingsKt")
     args(rootDir.resolve("app/src/main/assets/places.csv").absolutePath, rootDir.resolve("../docs/savings.md").absolutePath)
 }

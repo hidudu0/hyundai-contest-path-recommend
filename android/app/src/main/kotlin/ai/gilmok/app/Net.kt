@@ -1,4 +1,4 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
 import java.io.File
 import java.io.IOException
@@ -6,7 +6,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.security.MessageDigest
 
-const val USER_AGENT = "OnTheWay/0.1 (Hyundai in-car app contest prototype)"
+const val USER_AGENT = "Gilmok/0.1 (Hyundai in-car app contest prototype)"
 
 /** GET with an on-disk cache: the same request (same coordinates) is answered offline the next time. */
 class Net(private val dir: File) {

@@ -9,11 +9,11 @@ val local = Properties().apply {
 }
 
 android {
-    namespace = "ai.ontheway.app"
+    namespace = "ai.gilmok.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ai.ontheway.app"
+        applicationId = "ai.gilmok.app"
         minSdk = 28
         targetSdk = 34
         versionCode = 2

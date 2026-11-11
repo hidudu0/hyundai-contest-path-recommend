@@ -1,7 +1,7 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
-import ai.ontheway.core.Detour
-import ai.ontheway.core.LatLon
+import ai.gilmok.core.Detour
+import ai.gilmok.core.LatLon
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
@@ -43,38 +43,32 @@ object Palette {
 
 fun minutes(d: Detour) = "+${(d.dtSec / 60).roundToInt().coerceAtLeast(0)}분"
 
-/** E–F bar with the red (긴급) and yellow (추천) zones for the current fuel economy. */
+/** Fuel as a health bar: full width = full tank, fill shrinks and turns green → yellow → red by stage. */
 class FuelBar(context: Context, attrs: AttributeSet?) : View(context, attrs) {
     private var pct = 0.0
-    private var redFrac = 0.0
-    private var yellowFrac = 0.0
+    private var color = Palette.teal
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-    fun set(pct: Double, redFrac: Double, yellowFrac: Double) {
-        this.pct = pct
-        this.redFrac = redFrac.coerceIn(0.0, 1.0)
-        this.yellowFrac = yellowFrac.coerceIn(this.redFrac, 1.0)
+    fun set(pct: Double, color: Int) {
+        this.pct = pct.coerceIn(0.0, 100.0)
+        this.color = color
         invalidate()
     }
 
     override fun onDraw(c: Canvas) {
         val w = width.toFloat()
-        val top = 14f
-        val h = 22f
-        fun seg(from: Double, to: Double, color: Int) {
+        val top = 8f
+        val h = 30f
+        paint.color = Color.parseColor("#EEF1F5")
+        c.drawRoundRect(RectF(0f, top, w, top + h), h / 2, h / 2, paint)
+        if (pct > 0) {
             paint.color = color
-            c.drawRoundRect(RectF((from * w).toFloat(), top, (to * w).toFloat(), top + h), 8f, 8f, paint)
+            c.drawRoundRect(RectF(0f, top, (pct / 100 * w).toFloat().coerceAtLeast(h), top + h), h / 2, h / 2, paint)
         }
-        seg(0.0, 1.0, Color.parseColor("#CFE7DD"))
-        seg(redFrac, yellowFrac, Palette.yellow)
-        seg(0.0, redFrac, Palette.red)
-        val x = (pct.coerceIn(0.0, 100.0) / 100 * w).toFloat().coerceIn(4f, w - 4f)
-        paint.color = Palette.navy
-        c.drawRect(x - 3f, 0f, x + 3f, top + h + 10f, paint)
         paint.textSize = 20f
         paint.color = Palette.faint
-        c.drawText("E", 0f, top + h + 34f, paint)
-        c.drawText("F", w - 14f, top + h + 34f, paint)
+        c.drawText("E", 0f, top + h + 30f, paint)
+        c.drawText("F", w - 14f, top + h + 30f, paint)
     }
 }
 
@@ -108,7 +102,7 @@ class MapView(context: Context, attrs: AttributeSet?) : FrameLayout(context, att
         web.addJavascriptInterface(Bridge(), "OTW")
         web.webChromeClient = object : WebChromeClient() {
             override fun onConsoleMessage(m: ConsoleMessage): Boolean {
-                Log.d("OnTheWay", "map: ${m.message()} (line ${m.lineNumber()})")
+                Log.d("Gilmok", "map: ${m.message()} (line ${m.lineNumber()})")
                 return true
             }
         }

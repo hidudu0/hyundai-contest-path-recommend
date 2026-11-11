@@ -18,8 +18,8 @@
 
     <application
         android:allowBackup="false"
-        android:label="가는길"
-        android:theme="@style/Theme.OnTheWay">
+        android:label="길목"
+        android:theme="@style/Theme.Gilmok">
         <activity
             android:name=".MainActivity"
             android:exported="true"

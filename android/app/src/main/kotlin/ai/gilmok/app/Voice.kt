@@ -1,4 +1,4 @@
-package ai.ontheway.app
+package ai.gilmok.app
 
 import ai.pleos.playground.tts.TextToSpeech
 import ai.pleos.playground.tts.constant.ErrorType
